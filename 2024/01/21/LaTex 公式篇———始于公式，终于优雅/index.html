@@ -19,7 +19,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2024/01/21/images/image-20240123195621083.png">
 <meta property="article:published_time" content="2024-01-21T06:45:10.536Z">
-<meta property="article:modified_time" content="2024-01-23T11:58:14.278Z">
+<meta property="article:modified_time" content="2024-01-23T11:59:25.501Z">
 <meta property="article:author" content="Formosa">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2024/01/21/images/image-20240123195621083.png">
@@ -50,6 +50,9 @@
   
 
 
+  
+    <script src="/lib/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
   
 
 </head>
@@ -824,6 +827,35 @@ x_1^{y_w^z}=(1+e^x)^{-2xy^w}</script></blockquote>
   </div>
 
   
+<script type="text/javascript" src="/plugins/TweenMax/TweenMax.min.js"></script>
+<script type="text/javascript" src="/plugins/TweenMax/HoverImg.js"></script>
+
+<script>
+
+
+  var hoverEffect = {
+    "subNav": ".left-col .social a"
+  }
+
+
+  for (var x in hoverEffect) {
+    // 初始化data-img属性值
+    let $em = document.querySelectorAll(hoverEffect[x]);
+    $em.forEach(($a) => {
+      //console.log($a.href);
+      if (isImageType($a.href)) {
+        $a.setAttribute("data-img", $a.href)
+      }
+    })
+    // 实现悬停元素预览图片效果
+    let $a = document.querySelectorAll(hoverEffect[x] + "[data-img]");
+    $a.forEach(($em) => {
+      new HoverImgFx1($em)
+    })
+  }
+
+</script>
+
   
 <script type="text/javascript" src="/plugins/activate-power-mode/activate-power-mode.js"></script>
 <script>
