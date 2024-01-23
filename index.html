@@ -244,56 +244,61 @@
   <div class="article-entry" itemprop="articleBody">
     
     <h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><pre><code> 本文将从插入公式、注释、编号、转义字符、换行与对齐等对常用科研公式进行编辑。
-</code></pre>
-<h2 id="2-插入公式"><a href="#2-插入公式" class="headerlink" title="2.插入公式"></a>2.插入公式</h2><p>​	LaTex 数学模式中，公式有两种插入形式——行内公式和行间公式。前者嵌入于文章行内，适用于简短的公式；后者居中独占一行，适合复杂或需要单独描述的公式。</p>
-<p>​	makdown编辑框启动：按&#x3D;&#x3D;&gt;&#x3D;&#x3D; 键后，再按&#x3D;&#x3D;space&#x3D;&#x3D;键</p>
+</code></pre><h2 id="2-插入公式"><a href="#2-插入公式" class="headerlink" title="2.插入公式"></a>2.插入公式</h2><p>​    LaTex 数学模式中，公式有两种插入形式——行内公式和行间公式。前者嵌入于文章行内，适用于简短的公式；后者居中独占一行，适合复杂或需要单独描述的公式。</p>
+<p>​    makdown编辑框启动：按==&gt;== 键后，再按==space==键</p>
 <blockquote>
 </blockquote>
-<p>​	行内公式：在&#x3D;&#x3D;$ $&#x3D;&#x3D;中间输入公式代码，也可以&#x3D;&#x3D;shift&#x3D;&#x3D;+&#x3D;&#x3D;4&#x3D;&#x3D;后，在两字符$$中间输入代码，输出如下：</p>
+<p>​    行内公式：在==$ $==中间输入公式代码，也可以==shift==+==4==后，在两字符$$中间输入代码，输出如下：</p>
 <blockquote>
-<p>$f(x)&#x3D;ax+b$  </p>
+<p>$f(x)=ax+b$  </p>
 </blockquote>
-<p>​	行间公式：在&#x3D;&#x3D;$$  $$&#x3D;&#x3D;行间输入公式代码 ，也可以&#x3D;&#x3D;shift&#x3D;&#x3D;+&#x3D;&#x3D;4&#x3D;&#x3D;后，在两字符$$后敲&#x3D;&#x3D;enter&#x3D;&#x3D;，输出如下：</p>
+<p>​    行间公式：在==<script type="math/tex">$$==行间输入公式代码 ，也可以==shift==+==4==后，在两字符</script>后敲==enter==，输出如下：</p>
 <blockquote>
-<p>$$<br>f(x)&#x3D;ax&#x3D;b<br>$$</p>
-</blockquote>
-<h2 id="3-注释"><a href="#3-注释" class="headerlink" title="3.注释"></a>3.注释</h2><p>​	&#x3D;&#x3D;%&#x3D;&#x3D; 后跟单行注释内容。</p>
+<script type="math/tex; mode=display">
+f(x)=ax=b</script></blockquote>
+<h2 id="3-注释"><a href="#3-注释" class="headerlink" title="3.注释"></a>3.注释</h2><p>​    ==%== 后跟单行注释内容。</p>
 <blockquote>
 <p>%   这是一条注释</p>
 </blockquote>
-<h2 id="4-编号"><a href="#4-编号" class="headerlink" title="4.编号"></a>4.编号</h2><p>​	LaTeX编辑器包括手动编号和自动编号两种方式。</p>
-<p>​	对于Markdown和LaTeX编辑器而言，手动编号格式： 在&#x3D;&#x3D;$$  $$&#x3D;&#x3D;公式代码后输入&#x3D;&#x3D;\tag{}&#x3D;&#x3D; 可以获得相应编号，且会自动右对齐。</p>
+<h2 id="4-编号"><a href="#4-编号" class="headerlink" title="4.编号"></a>4.编号</h2><p>​    LaTeX编辑器包括手动编号和自动编号两种方式。</p>
+<p>​    对于Markdown和LaTeX编辑器而言，手动编号格式： 在==<script type="math/tex"> </script>==公式代码后输入==\tag{}== 可以获得相应编号，且会自动右对齐。</p>
 <blockquote>
-<p>$$<br>y&#x3D;ax&#x3D;b \tag{4-1}<br>$$</p>
-</blockquote>
-<p>​	但手动编号的效率太低，如果前文中公示的编号发生变化，后面的公式编号需要重新手动更改。因此引入自动编号方法:</p>
+<script type="math/tex; mode=display">
+y=ax=b \tag{4-1}</script></blockquote>
+<p>​    但手动编号的效率太低，如果前文中公示的编号发生变化，后面的公式编号需要重新手动更改。因此引入自动编号方法:</p>
 <blockquote>
 <p>\begin{equation}</p>
-<p>f(x)&#x3D;ax+b</p>
+<p>f(x)=ax+b</p>
 <p>\end{equation}</p>
 </blockquote>
-<h2 id="5-对齐"><a href="#5-对齐" class="headerlink" title="5.对齐"></a>5.对齐</h2><p>​	论文写作中，出现多行公式时，往往需要等号对齐。其中，又可以分为两种情况：</p>
+<h2 id="5-对齐"><a href="#5-对齐" class="headerlink" title="5.对齐"></a>5.对齐</h2><p>​    论文写作中，出现多行公式时，往往需要等号对齐。其中，又可以分为两种情况：</p>
 <blockquote>
 <p>1.单一公式连等换行操作，等号要求上下对齐</p>
 <p>2.多个公式同时定义，不同公式间等号上下对齐</p>
 </blockquote>
-<p>​	对应情况1，对于公式$a&#x3D;b+c&#x3D;b+d+f$,其换行表达方法如下：</p>
+<p>​    对应情况1，对于公式$a=b+c=b+d+f$,其换行表达方法如下：</p>
 <blockquote>
-<p>$$<br>\begin{align}</p>
-<p>a&amp;&#x3D;b+c\</p>
-<p>&amp;&#x3D;b+d+f</p>
-<p>\end{align}<br>$$</p>
-</blockquote>
-<p>​	&#x3D;&#x3D;注意！&#x3D;&#x3D;一定要在公式环境下调用相应的宏包，此处调用了&#x3D;&#x3D;\begin{align}&#x3D;&#x3D;和&#x3D;&#x3D;\end{align}&#x3D;&#x3D;。</p>
-<p>​	对于不同的公式，对齐方式同上。</p>
+<script type="math/tex; mode=display">
+\begin{align}
+
+a&=b+c\\
+
+&=b+d+f
+
+\end{align}</script></blockquote>
+<p>​    ==注意！==一定要在公式环境下调用相应的宏包，此处调用了==\begin{align}==和==\end{align}==。</p>
+<p>​    对于不同的公式，对齐方式同上。</p>
 <blockquote>
-<p>$$<br>\begin{align}<br>f(x)&amp;&#x3D;ax+b\<br>f(x)g(x)&amp;&#x3D;bx+d<br>\end{align}<br>$$</p>
-</blockquote>
-<h2 id="6-上下标"><a href="#6-上下标" class="headerlink" title="6.上下标"></a>6.上下标</h2><p>​	LaTeX中，&#x3D;&#x3D;^&#x3D;&#x3D;表示上标，&#x3D;&#x3D;_&#x3D;&#x3D;表示下标，如果同时需要上下标，连续输入即可，输入顺序没有要求。对于多个字符同时需要引用上下标，则需要对相应字符内容用&#x3D;&#x3D;{}&#x3D;&#x3D;括成一个整体。需要注意的是：上下标可以嵌套，也可以同时使用！如：</p>
-<p><img src="/../images/image-20240121203311856.png" alt="image-20240121203311856"></p>
+<script type="math/tex; mode=display">
+\begin{align}
+f(x)&=ax+b\\
+f(x)g(x)&=bx+d
+\end{align}</script></blockquote>
+<h2 id="6-上下标"><a href="#6-上下标" class="headerlink" title="6.上下标"></a>6.上下标</h2><p>​    LaTeX中，==^==表示上标，==_==表示下标，如果同时需要上下标，连续输入即可，输入顺序没有要求。对于多个字符同时需要引用上下标，则需要对相应字符内容用=={}==括成一个整体。需要注意的是：上下标可以嵌套，也可以同时使用！如：</p>
+<p><img src="../images/image-20240121203311856.png" alt="image-20240121203311856"></p>
 <blockquote>
-<p>$$<br>x_1^{y_w^z}&#x3D;(1+e^x)^{-2xy^w}<br>$$</p>
-</blockquote>
+<script type="math/tex; mode=display">
+x_1^{y_w^z}=(1+e^x)^{-2xy^w}</script></blockquote>
 
     
 
@@ -418,7 +423,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><img src="/images/image-20240118205813004.png"></p>
+    <p><img src="images/image-20240118205813004.png" alt></p>
 <p>​                                             故事从这里开始！</p>
 
     
@@ -482,10 +487,9 @@
   <div class="article-entry" itemprop="articleBody">
     
     <hr>
-<p>​—<br>formosa’s first package<br>​—</p>
+<p>​—-<br>formosa’s first package<br>​—-</p>
 <p>这是一篇测试文章</p>
 <img src="/2024/01/17/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/01/17/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/test.png" class title="this is a picture">
-
 <hr>
 
     
@@ -563,16 +567,12 @@
     
     <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
 
@@ -659,7 +659,7 @@
     </div>
     <script>
 	var yiliaConfig = {
-		mathjax: true,
+		mathjax: [object Object],
 		isHome: true,
 		isPost: false,
 		isArchive: false,
